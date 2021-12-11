@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAF579D3-1BE0-4940-ADF3-A64166B0A256}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKYNET</RootNamespace>
+    <AssemblyName>[SKYNET] TINserverlauncher</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Administrador\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>C:\Users\Administrador\Downloads\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TINserver.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F03A091B78580DEE2E99D42B17AB2F3A3A61DCEA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TINserverlauncher_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Librerías\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Librerías\Json net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>Resources\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v4.0.30319\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Modcommon.cs" />
+    <Compile Include="GUI\Controles\HackRadioButtom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Controles\StyleTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadingFile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\LoadingFile.designer.cs">
+      <DependentUpon>LoadingFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Message.designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\Display.cs" />
+    <Compile Include="Class\SaveSettings.cs" />
+    <Compile Include="Class\CpuUtil.cs" />
+    <Compile Include="Class\DiskUtil.cs" />
+    <Compile Include="Class\PerformanceCounterEventArgs.cs" />
+    <Compile Include="Class\RamUtil.cs" />
+    <EmbeddedResource Include="GUI\LoadingFile.resx">
+      <DependentUpon>LoadingFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="TINserverlauncher_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ping_On.png" />
+    <None Include="Resources\Dota 2.png" />
+    <None Include="Resources\Dota 2 - claro.png" />
+    <None Include="Resources\Dota2.png" />
+    <None Include="Resources\Dota2_claro.png" />
+    <None Include="Resources\vshost32.exe" />
+    <None Include="Resources\ScreenCapture.dll" />
+    <None Include="Resources\Dire.jpg" />
+    <None Include="Resources\Radiant.jpg" />
+    <None Include="Resources\npc_dota_hero_abaddon.png" />
+    <None Include="Resources\npc_dota_hero_abyssal_underlord.png" />
+    <None Include="Resources\npc_dota_hero_alchemist.png" />
+    <None Include="Resources\npc_dota_hero_ancient_apparition.png" />
+    <None Include="Resources\npc_dota_hero_antimage.png" />
+    <None Include="Resources\npc_dota_hero_arc_warden.png" />
+    <None Include="Resources\npc_dota_hero_armadillo.png" />
+    <None Include="Resources\npc_dota_hero_axe.png" />
+    <None Include="Resources\npc_dota_hero_bane.png" />
+    <None Include="Resources\npc_dota_hero_batrider.png" />
+    <None Include="Resources\npc_dota_hero_beastmaster.png" />
+    <None Include="Resources\npc_dota_hero_bloodseeker.png" />
+    <None Include="Resources\npc_dota_hero_bounty_hunter.png" />
+    <None Include="Resources\npc_dota_hero_brewmaster.png" />
+    <None Include="Resources\npc_dota_hero_bristleback.png" />
+    <None Include="Resources\npc_dota_hero_broodmother.png" />
+    <None Include="Resources\npc_dota_hero_centaur.png" />
+    <None Include="Resources\npc_dota_hero_chaos_knight.png" />
+    <None Include="Resources\npc_dota_hero_chen.png" />
+    <None Include="Resources\npc_dota_hero_clinkz.png" />
+    <None Include="Resources\npc_dota_hero_crystal_maiden.png" />
+    <None Include="Resources\npc_dota_hero_dark_seer.png" />
+    <None Include="Resources\npc_dota_hero_dark_willow.png" />
+    <None Include="Resources\npc_dota_hero_dazzle.png" />
+    <None Include="Resources\npc_dota_hero_death_prophet.png" />
+    <None Include="Resources\npc_dota_hero_default.png" />
+    <None Include="Resources\npc_dota_hero_disruptor.png" />
+    <None Include="Resources\npc_dota_hero_doom_bringer.png" />
+    <None Include="Resources\npc_dota_hero_dragon_knight.png" />
+    <None Include="Resources\npc_dota_hero_drow_ranger.png" />
+    <None Include="Resources\npc_dota_hero_earth_spirit.png" />
+    <None Include="Resources\npc_dota_hero_earthshaker.png" />
+    <None Include="Resources\npc_dota_hero_elder_titan.png" />
+    <None Include="Resources\npc_dota_hero_ember_spirit.png" />
+    <None Include="Resources\npc_dota_hero_enchantress.png" />
+    <None Include="Resources\npc_dota_hero_enigma.png" />
+    <None Include="Resources\npc_dota_hero_faceless_void.png" />
+    <None Include="Resources\npc_dota_hero_furion.png" />
+    <None Include="Resources\npc_dota_hero_gyrocopter.png" />
+    <None Include="Resources\npc_dota_hero_huskar.png" />
+    <None Include="Resources\npc_dota_hero_invoker.png" />
+    <None Include="Resources\npc_dota_hero_jakiro.png" />
+    <None Include="Resources\npc_dota_hero_juggernaut.png" />
+    <None Include="Resources\npc_dota_hero_keeper_of_the_light.png" />
+    <None Include="Resources\npc_dota_hero_kunkka.png" />
+    <None Include="Resources\npc_dota_hero_legion_commander.png" />
+    <None Include="Resources\npc_dota_hero_leshrac.png" />
+    <None Include="Resources\npc_dota_hero_lich.png" />
+    <None Include="Resources\npc_dota_hero_life_stealer.png" />
+    <None Include="Resources\npc_dota_hero_lina.png" />
+    <None Include="Resources\npc_dota_hero_lion.png" />
+    <None Include="Resources\npc_dota_hero_lone_druid.png" />
+    <None Include="Resources\npc_dota_hero_luna.png" />
+    <None Include="Resources\npc_dota_hero_lycan.png" />
+    <None Include="Resources\npc_dota_hero_magnataur.png" />
+    <None Include="Resources\npc_dota_hero_medusa.png" />
+    <None Include="Resources\npc_dota_hero_meepo.png" />
+    <None Include="Resources\npc_dota_hero_mirana.png" />
+    <None Include="Resources\npc_dota_hero_monkey_king.png" />
+    <None Include="Resources\npc_dota_hero_morphling.png" />
+    <None Include="Resources\npc_dota_hero_naga_siren.png" />
+    <None Include="Resources\npc_dota_hero_necrolyte.png" />
+    <None Include="Resources\npc_dota_hero_nevermore.png" />
+    <None Include="Resources\npc_dota_hero_night_stalker.png" />
+    <None Include="Resources\npc_dota_hero_nyx_assassin.png" />
+    <None Include="Resources\npc_dota_hero_obsidian_destroyer.png" />
+    <None Include="Resources\npc_dota_hero_ogre_magi.png" />
+    <None Include="Resources\npc_dota_hero_omniknight.png" />
+    <None Include="Resources\npc_dota_hero_oracle.png" />
+    <None Include="Resources\npc_dota_hero_pangolier.png" />
+    <None Include="Resources\npc_dota_hero_phantom_assassin.png" />
+    <None Include="Resources\npc_dota_hero_phantom_lancer.png" />
+    <None Include="Resources\npc_dota_hero_phoenix.png" />
+    <None Include="Resources\npc_dota_hero_puck.png" />
+    <None Include="Resources\npc_dota_hero_pudge.png" />
+    <None Include="Resources\npc_dota_hero_pugna.png" />
+    <None Include="Resources\npc_dota_hero_queenofpain.png" />
+    <None Include="Resources\npc_dota_hero_rattletrap.png" />
+    <None Include="Resources\npc_dota_hero_razor.png" />
+    <None Include="Resources\npc_dota_hero_riki.png" />
+    <None Include="Resources\npc_dota_hero_rubick.png" />
+    <None Include="Resources\npc_dota_hero_sand_king.png" />
+    <None Include="Resources\npc_dota_hero_shadow_demon.png" />
+    <None Include="Resources\npc_dota_hero_shadow_shaman.png" />
+    <None Include="Resources\npc_dota_hero_shredder.png" />
+    <None Include="Resources\npc_dota_hero_silencer.png" />
+    <None Include="Resources\npc_dota_hero_skeleton_king.png" />
+    <None Include="Resources\npc_dota_hero_skywrath_mage.png" />
+    <None Include="Resources\npc_dota_hero_slardar.png" />
+    <None Include="Resources\npc_dota_hero_slark.png" />
+    <None Include="Resources\npc_dota_hero_sniper.png" />
+    <None Include="Resources\npc_dota_hero_spectre.png" />
+    <None Include="Resources\npc_dota_hero_spirit_breaker.png" />
+    <None Include="Resources\npc_dota_hero_storm_spirit.png" />
+    <None Include="Resources\npc_dota_hero_sven.png" />
+    <None Include="Resources\npc_dota_hero_sylph.png" />
+    <None Include="Resources\npc_dota_hero_techies.png" />
+    <None Include="Resources\npc_dota_hero_templar_assassin.png" />
+    <None Include="Resources\npc_dota_hero_terrorblade.png" />
+    <None Include="Resources\npc_dota_hero_tidehunter.png" />
+    <None Include="Resources\npc_dota_hero_tinker.png" />
+    <None Include="Resources\npc_dota_hero_tiny.png" />
+    <None Include="Resources\npc_dota_hero_treant.png" />
+    <None Include="Resources\npc_dota_hero_troll_warlord.png" />
+    <None Include="Resources\npc_dota_hero_tusk.png" />
+    <None Include="Resources\npc_dota_hero_undying.png" />
+    <None Include="Resources\npc_dota_hero_ursa.png" />
+    <None Include="Resources\npc_dota_hero_vengefulspirit.png" />
+    <None Include="Resources\npc_dota_hero_venomancer.png" />
+    <None Include="Resources\npc_dota_hero_viper.png" />
+    <None Include="Resources\npc_dota_hero_visage.png" />
+    <None Include="Resources\npc_dota_hero_warlock.png" />
+    <None Include="Resources\npc_dota_hero_weaver.png" />
+    <None Include="Resources\npc_dota_hero_windrunner.png" />
+    <None Include="Resources\npc_dota_hero_winter_wyvern.png" />
+    <None Include="Resources\npc_dota_hero_wisp.png" />
+    <None Include="Resources\npc_dota_hero_witch_doctor.png" />
+    <None Include="Resources\npc_dota_hero_zuus.png" />
+    <None Include="Resources\item_abyssal_blade.png" />
+    <None Include="Resources\item_aegis.png" />
+    <None Include="Resources\item_aeon_disk.png" />
+    <None Include="Resources\item_aether_lens.png" />
+    <None Include="Resources\item_ancient_janggo.png" />
+    <None Include="Resources\item_arcane_boots.png" />
+    <None Include="Resources\item_armlet_active.png" />
+    <None Include="Resources\item_assault.png" />
+    <None Include="Resources\item_basher.png" />
+    <None Include="Resources\item_belt_of_strength.png" />
+    <None Include="Resources\item_bfury.png" />
+    <None Include="Resources\item_black_king_bar.png" />
+    <None Include="Resources\item_blade_mail.png" />
+    <None Include="Resources\item_blade_mail_axe_pw.png" />
+    <None Include="Resources\item_blade_of_alacrity.png" />
+    <None Include="Resources\item_blades_of_attack.png" />
+    <None Include="Resources\item_blight_stone.png" />
+    <None Include="Resources\item_blink.png" />
+    <None Include="Resources\item_bloodstone.png" />
+    <None Include="Resources\item_bloodthorn.png" />
+    <None Include="Resources\item_boots.png" />
+    <None Include="Resources\item_boots_of_elves.png" />
+    <None Include="Resources\item_bottle.png" />
+    <None Include="Resources\item_bottle_arcane.png" />
+    <None Include="Resources\item_bottle_bounty.png" />
+    <None Include="Resources\item_bottle_doubledamage.png" />
+    <None Include="Resources\item_bottle_empty.png" />
+    <None Include="Resources\item_bottle_haste.png" />
+    <None Include="Resources\item_bottle_illusion.png" />
+    <None Include="Resources\item_bottle_invisibility.png" />
+    <None Include="Resources\item_bottle_medium.png" />
+    <None Include="Resources\item_bottle_regeneration.png" />
+    <None Include="Resources\item_bottle_small.png" />
+    <None Include="Resources\item_bracer.png" />
+    <None Include="Resources\item_branches.png" />
+    <None Include="Resources\item_broadsword.png" />
+    <None Include="Resources\item_buckler.png" />
+    <None Include="Resources\item_butterfly.png" />
+    <None Include="Resources\item_chainmail.png" />
+    <None Include="Resources\item_cheese.png" />
+    <None Include="Resources\item_circlet.png" />
+    <None Include="Resources\item_clarity.png" />
+    <None Include="Resources\item_claymore.png" />
+    <None Include="Resources\item_cloak.png" />
+    <None Include="Resources\item_courier.png" />
+    <None Include="Resources\item_crimson_guard.png" />
+    <None Include="Resources\item_crimson_robe.png" />
+    <None Include="Resources\item_cyclone.png" />
+    <None Include="Resources\item_dagon.png" />
+    <None Include="Resources\item_dagon_2.png" />
+    <None Include="Resources\item_dagon_3.png" />
+    <None Include="Resources\item_dagon_4.png" />
+    <None Include="Resources\item_dagon_5.png" />
+    <None Include="Resources\item_demon_edge.png" />
+    <None Include="Resources\item_desolator.png" />
+    <None Include="Resources\item_diffusal_blade.png" />
+    <None Include="Resources\item_diffusal_blade_2.png" />
+    <None Include="Resources\item_dragon_lance.png" />
+    <None Include="Resources\item_dust.png" />
+    <None Include="Resources\item_eagle.png" />
+    <None Include="Resources\item_echo_sabre.png" />
+    <None Include="Resources\item_enchanted_mango.png" />
+    <None Include="Resources\item_energy_booster.png" />
+    <None Include="Resources\item_ethereal_blade.png" />
+    <None Include="Resources\item_faerie_fire.png" />
+    <None Include="Resources\item_flask.png" />
+    <None Include="Resources\item_flying_courier.png" />
+    <None Include="Resources\item_force_staff.png" />
+    <None Include="Resources\item_gauntlets.png" />
+    <None Include="Resources\item_gem.png" />
+    <None Include="Resources\item_ghost.png" />
+    <None Include="Resources\item_ghost_scepter.png" />
+    <None Include="Resources\item_glimmer_cape.png" />
+    <None Include="Resources\item_gloves.png" />
+    <None Include="Resources\item_gloves_of_haste.png" />
+    <None Include="Resources\item_greater_crit.png" />
+    <None Include="Resources\item_guardian_greaves.png" />
+    <None Include="Resources\item_hand_of_midas.png" />
+    <None Include="Resources\item_headdress.png" />
+    <None Include="Resources\item_heart.png" />
+    <None Include="Resources\item_heavens_halberd.png" />
+    <None Include="Resources\item_helm_of_iron_will.png" />
+    <None Include="Resources\item_helm_of_the_dominator.png" />
+    <None Include="Resources\item_hood_of_defiance.png" />
+    <None Include="Resources\item_hurricane_pike.png" />
+    <None Include="Resources\item_hyperstone.png" />
+    <None Include="Resources\item_infused_raindrop.png" />
+    <None Include="Resources\item_invis_sword.png" />
+    <None Include="Resources\item_iron_talon.png" />
+    <None Include="Resources\item_javelin.png" />
+    <None Include="Resources\item_kaya.png" />
+    <None Include="Resources\item_lesser_crit.png" />
+    <None Include="Resources\item_lifesteal.png" />
+    <None Include="Resources\item_lotus_orb.png" />
+    <None Include="Resources\item_maelstrom.png" />
+    <None Include="Resources\item_magic_stick.png" />
+    <None Include="Resources\item_magic_wand.png" />
+    <None Include="Resources\item_manta.png" />
+    <None Include="Resources\item_mantle.png" />
+    <None Include="Resources\item_mask_of_madness.png" />
+    <None Include="Resources\item_medallion_of_courage.png" />
+    <None Include="Resources\item_mekansm.png" />
+    <None Include="Resources\item_meteor_hammer.png" />
+    <None Include="Resources\item_mithril_hammer.png" />
+    <None Include="Resources\item_mjollnir.png" />
+    <None Include="Resources\item_monkey_king_bar.png" />
+    <None Include="Resources\item_moon_shard.png" />
+    <None Include="Resources\item_mystic_staff.png" />
+    <None Include="Resources\item_necronomicon.png" />
+    <None Include="Resources\item_necronomicon_2.png" />
+    <None Include="Resources\item_necronomicon_3.png" />
+    <None Include="Resources\item_nian_flag_trap.png" />
+    <None Include="Resources\item_null_talisman.png" />
+    <None Include="Resources\item_nullifier.png" />
+    <None Include="Resources\item_oblivion_staff.png" />
+    <None Include="Resources\item_octarine_core.png" />
+    <None Include="Resources\item_ogre_axe.png" />
+    <None Include="Resources\item_orb_of_venom.png" />
+    <None Include="Resources\item_orchid.png" />
+    <None Include="Resources\item_pers.png" />
+    <None Include="Resources\item_phase_boots.png" />
+    <None Include="Resources\item_pipe.png" />
+    <None Include="Resources\item_platemail.png" />
+    <None Include="Resources\item_point_booster.png" />
+    <None Include="Resources\item_poor_mans_shield.png" />
+    <None Include="Resources\item_power_treads.png" />
+    <None Include="Resources\item_power_treads_agi.png" />
+    <None Include="Resources\item_power_treads_agi_colorblind.png" />
+    <None Include="Resources\item_power_treads_int.png" />
+    <None Include="Resources\item_power_treads_str.png" />
+    <None Include="Resources\item_quarterstaff.png" />
+    <None Include="Resources\item_quelling_blade.png" />
+    <None Include="Resources\item_radiance.png" />
+    <None Include="Resources\item_rapier.png" />
+    <None Include="Resources\item_reaver.png" />
+    <None Include="Resources\item_recipe.png" />
+    <None Include="Resources\item_recipe_scroll.png" />
+    <None Include="Resources\item_refresher.png" />
+    <None Include="Resources\item_refresher_shard.png" />
+    <None Include="Resources\item_relic.png" />
+    <None Include="Resources\item_ring_of_aquila.png" />
+    <None Include="Resources\item_ring_of_basilius_active.png" />
+    <None Include="Resources\item_ring_of_health.png" />
+    <None Include="Resources\item_ring_of_protection.png" />
+    <None Include="Resources\item_ring_of_regen.png" />
+    <None Include="Resources\item_robe.png" />
+    <None Include="Resources\item_rod_of_atos.png" />
+    <None Include="Resources\item_salve.png" />
+    <None Include="Resources\item_sange.png" />
+    <None Include="Resources\item_sange_and_yasha.png" />
+    <None Include="Resources\item_satanic.png" />
+    <None Include="Resources\item_shadow_amulet.png" />
+    <None Include="Resources\item_sheepstick.png" />
+    <None Include="Resources\item_shivas_guard.png" />
+    <None Include="Resources\item_silver_edge.png" />
+    <None Include="Resources\item_skadi.png" />
+    <None Include="Resources\item_slippers.png" />
+    <None Include="Resources\item_slippers_of_halcyon.png" />
+    <None Include="Resources\item_smoke_of_deceit.png" />
+    <None Include="Resources\item_sobi_mask.png" />
+    <None Include="Resources\item_solar_crest.png" />
+    <None Include="Resources\item_soul_booster.png" />
+    <None Include="Resources\item_soul_ring.png" />
+    <None Include="Resources\item_sphere.png" />
+    <None Include="Resources\item_spirit_vessel.png" />
+    <None Include="Resources\item_staff_of_wizardry.png" />
+    <None Include="Resources\item_stout_shield.png" />
+    <None Include="Resources\item_talisman_of_evasion.png" />
+    <None Include="Resources\item_tango.png" />
+    <None Include="Resources\item_tango_single.png" />
+    <None Include="Resources\item_tome_of_knowledge.png" />
+    <None Include="Resources\item_tpscroll.png" />
+    <None Include="Resources\item_tranquil_boots.png" />
+    <None Include="Resources\item_travel_boots.png" />
+    <None Include="Resources\item_travel_boots_2.png" />
+    <None Include="Resources\item_travel_boots_tinker.png" />
+    <None Include="Resources\item_ultimate_orb.png" />
+    <None Include="Resources\item_ultimate_scepter.png" />
+    <None Include="Resources\item_urn_of_shadows.png" />
+    <None Include="Resources\item_vanguard.png" />
+    <None Include="Resources\item_veil_of_discord.png" />
+    <None Include="Resources\item_vitality_booster.png" />
+    <None Include="Resources\item_vladmir.png" />
+    <None Include="Resources\item_void_stone.png" />
+    <None Include="Resources\item_ward_dispenser.png" />
+    <None Include="Resources\item_ward_dispenser_sentry.png" />
+    <None Include="Resources\item_ward_observer.png" />
+    <None Include="Resources\item_ward_sentry.png" />
+    <None Include="Resources\item_wind_lace.png" />
+    <None Include="Resources\item_wraith_band.png" />
+    <None Include="Resources\item_yasha.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\MyVideoClass.dll" />
+    <None Include="Resources\rank0.png" />
+    <None Include="Resources\rank1.png" />
+    <None Include="Resources\rank2.png" />
+    <None Include="Resources\rank3.png" />
+    <None Include="Resources\rank4.png" />
+    <None Include="Resources\rank5.png" />
+    <None Include="Resources\rank6.png" />
+    <None Include="Resources\rank7.png" />
+    <None Include="Resources\rank7a.png" />
+    <None Include="Resources\rank7b.png" />
+    <None Include="Resources\rank7c.png" />
+    <None Include="Resources\ValvePak.dll" />
+    <None Include="Resources\ValveResourceFormat.dll" />
+    <None Include="Resources\MySql.Data.dll" />
+    <None Include="bin\x86\Debug\MySql.Data.dll" />
+    <None Include="Resources\folder-remote1.png" />
+    <None Include="Resources\computer-4.png" />
+    <None Include="Resources\edit-copy-2.png" />
+    <None Include="Resources\TcpComm.dll" />
+    <None Include="Resources\Newtonsoft.Json.dll" />
+    <None Include="Resources\CapturarEstadisticas.exe" />
+    <None Include="Resources\Dota2GSI.dll" />
+    <None Include="Resources\Dota2StatsGrapper.exe" />
+    <None Include="Resources\CapturarEstadistica.exe" />
+    <Content Include="TINserver.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
